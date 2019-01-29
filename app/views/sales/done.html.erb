@@ -1,9 +1,14 @@
+<% if flash[:notice] %>
+  <div class="notice"><%= flash[:notice] %></div>
+<% end %>
+
 <table style="width:30%">
   <tr>
     <th>Código</th>
     <th>Detalle</th>
     <th>Valor</th>
     <th>Total</th>
+    <th>Categoría</th>
     <th>Tax</th>
   </tr>
 
@@ -13,6 +18,7 @@
     <td> <%= sale.detail %> </td>
     <td> <%= sale.value %> </td>
     <td> <%= sale.total %> </td>
+    <td> <%= sale.category %> </td>
     <td> <%= sale.tax %> </td>
   </tr>
 <% end %>
