@@ -1,0 +1,26 @@
+<h1>Crear productos</h1>
+<p>Acá puedes ingresar el nuevo producto</p>
+
+<%= form_with model: @sale, local: true do |f| %>
+
+<br><%= f.number_field :cod %>
+<%= label_tag(:cod, "Código del producto") %>
+
+<br><%= f.text_area :detail %>
+<%= label_tag(:detail, "Detalle del producto") %>
+
+<br><%= f.text_field :category %>
+<%= label_tag(:category, "Categoría del producto") %>
+
+<br><%= f.number_field :value %>
+<%= label_tag(:value, "Valor del producto") %>
+
+<br><%= f.number_field :discount %>
+<%= label_tag(:discount, "Descuento del producto") %>
+
+<br><%= check_box_tag :tax %>
+<%= label_tag(:tax, "Exento de IVA") %>
+
+<br>
+<br>  <%= f.submit "Enviar" %>
+<% end %>
